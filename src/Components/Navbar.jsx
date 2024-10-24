@@ -1,11 +1,11 @@
-// src/Components/Navbar.jsx
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { FaBars, FaTimes } from 'react-icons/fa'; // Importing icons from React Icons
+import { FaBars, FaTimes } from 'react-icons/fa';
 
 const Navbar = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const menuItems = [
     { name: 'Home', path: '/' },
@@ -19,10 +19,26 @@ const Navbar = () => {
     setMobileMenuOpen(!isMobileMenuOpen);
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      console.log('Scroll Position:', scrollPosition); // Debugging log
+      setIsScrolled(scrollPosition > 50);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
-    <nav className="bg-blue-400 text-white p-4 shadow-md">
+    <nav
+      className={`bg-blue-500 text-white p-4 shadow-md sticky top-0 z-50 transition-all duration-300 ${
+        isScrolled ? 'bg-blue-200 shadow-lg text-black hover:text-blue-500' : ''
+      }`}
+    >
       <div className="container mx-auto flex justify-between items-center">
-        {/* Logo */}
         <motion.div
           className="text-2xl font-bold"
           initial={{ opacity: 0, x: -50 }}
@@ -32,7 +48,6 @@ const Navbar = () => {
           <Link to="/">Logo</Link>
         </motion.div>
 
-        {/* Desktop Menu Items */}
         <ul className="hidden md:flex space-x-8">
           {menuItems.map((item, index) => (
             <motion.li
@@ -40,20 +55,16 @@ const Navbar = () => {
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 * index, duration: 0.5 }}
-              className="group relative transition-transform duration-300 ease-in-out transform" // Added transition and transform classes
+              className="group relative transition-transform duration-300 ease-in-out transform"
             >
               <Link to={item.path} className="hover:scale-y-150 transition-colors duration-300">
                 {item.name}
               </Link>
-              {/* Hover effect underline */}
-              <div className="bg-white rounded-md w-0 group-hover:w-[100%] transition-all duration-300 ease-in-out h-[2px] absolute bottom-0 left-0">
-                <div className="bg-white w-0 group-hover:w-inherit h-[2px] transition-all duration-200 ease-in-out"></div>
-              </div>
+              <div className="bg-white rounded-md w-0 group-hover:w-[100%] transition-all duration-300 ease-in-out h-[2px] absolute bottom-0 left-0" />
             </motion.li>
           ))}
         </ul>
 
-        {/* Mobile Menu Toggle */}
         <motion.div
           className="md:hidden text-2xl"
           initial={{ opacity: 0 }}
@@ -66,23 +77,18 @@ const Navbar = () => {
             className="focus:outline-none"
           >
             <motion.div
-              animate={{ rotate: isMobileMenuOpen ? 180 : 0 }} // Rotate icon on toggle
+              animate={{ rotate: isMobileMenuOpen ? 180 : 0 }}
               transition={{ duration: 0.3 }}
             >
-              {isMobileMenuOpen ? (
-                <FaTimes className="text-3xl" />
-              ) : (
-                <FaBars className="text-3xl" />
-              )}
+              {isMobileMenuOpen ? <FaTimes className="text-3xl" /> : <FaBars className="text-3xl" />}
             </motion.div>
           </button>
         </motion.div>
       </div>
 
-      {/* Mobile Menu Items */}
       {isMobileMenuOpen && (
         <motion.ul
-          className="md:hidden bg-blue-400 text-white space-y-2 p-4 rounded-md z-50"
+          className="absolute top-16 left-0 w-full bg-blue-400 text-white space-y-2 p-4 rounded-md z-50"
           initial={{ opacity: 0, height: 0 }}
           animate={{ opacity: 1, height: 'auto' }}
           exit={{ opacity: 0, height: 0 }}
