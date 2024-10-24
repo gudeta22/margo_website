@@ -35,7 +35,7 @@ const Navbar = () => {
   return (
     <nav
       className={`bg-blue-500 text-white p-4 shadow-md sticky top-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-blue-200 shadow-lg text-black hover:text-blue-500' : ''
+        isScrolled ? 'bg-blue-500 shadow-lg text-black ' : ''
       }`}
     >
       <div className="container mx-auto flex justify-between items-center">

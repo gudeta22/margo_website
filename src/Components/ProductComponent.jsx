@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
 
@@ -21,7 +22,6 @@ const sermons = [
         imageUrl: "https://www.neuvar.com/wp-content/uploads/2022/05/Hb224275b3bd1467ebe12dae3deba3ed5R.jpg",
         description: "Discover how to find inner peace and serenity during difficult times through faith."
     },
-
 ];
 
 const ProductComponent = () => {
@@ -35,16 +35,15 @@ const ProductComponent = () => {
     return (
         <div className="container mx-auto px-4 my-10 lg:my-52">
             <div className="text-center mb-8">
-                <h2 className="text-blue-400  fontstyle text-2xl uppercase">Recent Products</h2>
+                <h2 className="poppins font-normal uppercase text-blue-400 text-base md:text-lg lg:text-2xl fontstyl">Recent Products</h2>
                 <p className="poppins font-normal text-[#686868] text-base md:text-lg lg:text-xl fontstyle lg:my-7">
-                Discover our recent additions to the pharmaceutical range, providing innovative solutions tailored to meet your health needs. Trust in our commitment to quality and effective results
+                    Discover our recent additions to the pharmaceutical range, providing innovative solutions tailored to meet your health needs. Trust in our commitment to quality and effective results.
                 </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:h-[20rem}">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:h-[20rem]">
                 {sermons.map(sermon => (
-                    <div key={sermon.id} className="bg-white shadow-xl  border-gray-200 rounded-lg overflow-hidden ">
-                        
+                    <div key={sermon.id} className="bg-white shadow-xl border-gray-200 rounded-lg overflow-hidden">
                         {/* Sermon Image */}
                         <div className="relative w-full h-56">
                             <img
@@ -72,6 +71,13 @@ const ProductComponent = () => {
                         </div>
                     </div>
                 ))}
+            </div>
+
+            {/* Link to Products Page */}
+            <div className="mt-8 text-center ">
+                <Link to="/product" className="text-blue-500 underline">
+                    View All Products
+                </Link>
             </div>
         </div>
     );

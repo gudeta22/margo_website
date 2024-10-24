@@ -42,8 +42,8 @@ function AboutComponent() {
           className="flex flex-col justify-center gap-8 w-full md:w-1/2 transform-start"
           ref={el => el && elementsRef.current.push(el)} // Use ref for this section
         >
-          <span className="flex items-center lg:text-2xl">
-            <p className="uppercase font-thin fontstyle text-blue-400">Our Mission</p>
+          <span className="text-center lg:text-start lg:text-2xl">
+            <p className="uppercase font-thin text-center fontstyle text-blue-400">Our Mission</p>
           </span>
           <h2 className="poppins font-normal uppercase text-black  text-base md:text-lg lg:text-4xl fontstyle">
             Leading Pharmaceutical Product Supply
