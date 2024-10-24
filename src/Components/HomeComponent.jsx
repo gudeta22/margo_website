@@ -20,7 +20,7 @@ function HomeComponent() {
   return (
     <section className="">
       <div
-        className="relative h-[45rem] lg:h-[40rem] w-full overflow-hidden bg-fixed"
+        className="relative h-[45rem] lg:h-screen w-full overflow-hidden bg-fixed"
         style={{
           backgroundImage: `url(${homebg})`, // Correct way to set the background image
           backgroundSize: "cover",
