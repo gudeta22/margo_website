@@ -41,7 +41,7 @@ const data = [
   },
 ];
 
-const ServiceComponents = () => {
+const AllService = () => {
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -49,17 +49,7 @@ const ServiceComponents = () => {
       exit={{ opacity: 0 }}
       className="container mx-auto py-12 px-4 my-10"
     >
-      <div className="flex flex-col items-center text-center gap-4 py-7">
-        <span className="flex items-center font-bold justify-center">
-          <p className="poppins font-normal uppercase text-blue-400 text-base md:text-lg lg:text-2xl fontstyle">
-            Services we provide
-          </p>
-        </span>
-
-        <p className="poppins font-normal text-[#686868] text-base md:text-lg lg:text-xl fontstyle lg:my-7">
-          Join us in our commitment to enhancing healthcare through quality pharmaceutical products and innovative solutions. Together, we can improve lives and transform healthcare systems globally.
-        </p>
-      </div>
+     
 
       <div className="grid md:grid-cols-3 gap-8">
         {data.map((item, index) => (
@@ -101,4 +91,4 @@ const InvolvementCard = ({ icon, title, description, delay }) => (
   </motion.div>
 );
 
-export default ServiceComponents;
+export default AllService;

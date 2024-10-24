@@ -42,13 +42,13 @@ function AboutComponent() {
           className="flex flex-col justify-center gap-8 w-full md:w-1/2 transform-start"
           ref={el => el && elementsRef.current.push(el)} // Use ref for this section
         >
-          <span className="flex items-center lg:text-4xl">
+          <span className="flex items-center lg:text-2xl">
             <p className="uppercase font-thin fontstyle text-blue-400">Our Mission</p>
           </span>
-          <h2 className="text-[#1d2434] font-extrabold text-[24px] md:text-[28px] lg:text-2xl">
+          <h2 className="poppins font-normal uppercase text-black  text-base md:text-lg lg:text-4xl fontstyle">
             Leading Pharmaceutical Product Supply
           </h2>
-          <p className="poppins font-normal text-[#686868] text-base md:text-lg lg:text-xl">
+          <p className="poppins font-normal text-[#686868] text-base md:text-lg lg:text-xl fontstyle">
             At Margo Medical Pharma PLC, we are dedicated to providing a comprehensive range of pharmaceutical products to meet the needs of healthcare professionals and institutions. Our commitment to quality and excellence ensures that our partners receive only the best products available in the market.
           </p>
         </div>
@@ -56,7 +56,7 @@ function AboutComponent() {
         <div className="flex w-full md:w-1/2 relative">
           <div className="relative w-full lg:w-[32rem] transform-start">
             <div className=" rounded-lg  shadow-2xl shadow-blue-400 overflow-hidden"> {/* Frame styling */}
-              <img src={missionimg} className="object-cover w-fit h-fit" alt="Home Background" />
+              <img src={missionimg} className="object-cover w-fit" alt="Home Background" />
             </div>
           </div>
         </div>

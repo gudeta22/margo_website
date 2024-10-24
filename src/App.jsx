@@ -6,7 +6,7 @@ import Product from './Pages/Product';
 import OurCompany from './Pages/OurCompany';
 import Contact from './Pages/Contact';
 import Home from './Pages/Home.jsx';
-import Services from './Pages/Services.jsx';
+// import Services from './Pages/Services.jsx';
 import Footer from './Components/Footer.jsx';
 
 function App() {
@@ -34,7 +34,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/product" element={<Product />} />
-        <Route path="/services" element={<Services />} />
+        {/* <Route path="/services" element={<Services />} /> */}
         <Route path="/ourcompany" element={<OurCompany />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>

@@ -33,11 +33,11 @@ const ProductComponent = () => {
     };
 
     return (
-        <div className="container mx-auto px-4 lg:my-52">
+        <div className="container mx-auto px-4 my-10 lg:my-52">
             <div className="text-center mb-8">
-                <h2 className="text-blue-500 font-thin text-2xl uppercase">Recent Products</h2>
-                <p className="text-black max-w-3xl mx-auto mt-4">
-                    Here, you’ll find uplifting messages based on Scripture, designed to inspire and deepen your faith.
+                <h2 className="text-blue-400  fontstyle text-2xl uppercase">Recent Products</h2>
+                <p className="poppins font-normal text-[#686868] text-base md:text-lg lg:text-xl fontstyle lg:my-7">
+                Discover our recent additions to the pharmaceutical range, providing innovative solutions tailored to meet your health needs. Trust in our commitment to quality and effective results
                 </p>
             </div>
 
