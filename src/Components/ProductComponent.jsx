@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom'; // Import Link from react-router-dom
+import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
 
@@ -25,9 +25,8 @@ const sermons = [
 ];
 
 const ProductComponent = () => {
-    const [expandedId, setExpandedId] = useState(null); // State to track the expanded sermon
+    const [expandedId, setExpandedId] = useState(null);
 
-    // Toggle the accordion: close if clicked again, otherwise open the new one
     const toggleAccordion = (id) => {
         setExpandedId(prevId => (prevId === id ? null : id));
     };
@@ -66,7 +65,7 @@ const ProductComponent = () => {
                         </div>
 
                         {/* Accordion Content */}
-                        <div className={`overflow-hidden transition-max-height duration-500 z-50 ease-in-out ${expandedId === sermon.id ? 'max-h-96' : 'max-h-0'}`}>
+                        <div className={`transition-all duration-500 ${expandedId === sermon.id ? 'block' : 'hidden'}`}>
                             <p className="p-4 text-black">{sermon.description}</p>
                         </div>
                     </div>
@@ -74,7 +73,7 @@ const ProductComponent = () => {
             </div>
 
             {/* Link to Products Page */}
-            <div className="mt-8 text-center ">
+            <div className="mt-8 text-center">
                 <Link to="/product" className="text-blue-500 underline">
                     View All Products
                 </Link>
