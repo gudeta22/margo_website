@@ -79,7 +79,7 @@ const data = [
         <div className="mb-4 group">
           <FontAwesomeIcon icon={icon} className="text-4xl text-black hover:text-white transition-colors duration-300" />
         </div>
-        <h3 className="text-lg lg:text-xl md:text-xl sm:text-lg m-5 font-thin uppercase mb-2">
+        <h3 className="text-lg lg:text-xl md:text-xl text-black poppins  sm:text-lg m-5 font-thin uppercase mb-2">
           {title}
         </h3>
         <ul className="font-thin mb-4 m-5">
