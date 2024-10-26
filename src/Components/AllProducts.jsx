@@ -5,45 +5,45 @@ import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
 const sermons = [
     {
         id: 1,
-        title: "CBC",
-        imageUrl: "https://www.pixcell-medical.com/wp-content/uploads/2022/07/Rectangle-5.jpg",
-        description: "Explore how faith can empower you in difficult times and provide strength in every aspect of life."
+        title: "Hematology Analyzer(CBC)",
+        imageUrl: "https://m.media-amazon.com/images/I/71xSomVDYEL._AC_UF1000,1000_QL80_.jpg",
+        description: "A Hematology Analyzer, specifically for Complete Blood Count (CBC), is a medical device used to analyze blood samples, providing critical information on various blood components"
     },
     {
         id: 2,
-        title: "Chemistry machine",
-        imageUrl: "https://www.rsmedic.com/wp-content/uploads/2022/06/Erba-Chem-7-Clinical-Chemistry-Analyzer.jpeg",
-        description: "Learn about the importance of love and compassion towards others in this inspiring sermon."
+        title: "Chemistry Machine",
+        imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgPZ_uhZHodhJccytOmEndiEblEFiBNMOKjg&s",
+        description: "A Chemistry Machine, commonly known as a Chemistry Analyzer, is a laboratory instrument used to analyze blood and other bodily fluids to measure the concentration of various biochemical components"
     },
     {
         id: 3,
         title: "Hormone Analyzer",
-        imageUrl: "https://image.made-in-china.com/202f0j00hiqbwnkdQcof/Cheap-Price-Poct-Immunoassay-Analyzer-Hormones-Analyzer-Hba1c-Meter-Mslyt22.webp",
-        description: "Discover how to find inner peace and serenity during difficult times through faith."
+        imageUrl: "https://svrbiotech.com/wp-content/uploads/2020/02/ss2.jpg",
+        description: "A Hormone Analyzer is a specialized medical device used to measure hormone levels in blood or other bodily fluids."
     },
     {
         id: 4,
-        title: "Ultrasound",
-        imageUrl: "https://media.istockphoto.com/id/487745279/photo/medical-ultrasound-diagnostic-machine.jpg?s=612x612&w=0&k=20&c=mkYARVaUPiplzA8__m1TppY7OUFnF0cuJi3OEH85FwA=",
-        description: "Discover how to find inner peace and serenity during difficult times through faith."
+        title: "Ultrasound Machine",
+        imageUrl: "https://www.chison.com/data/watermark/20210426/608626c64374f.png",
+        description: "Our ultrasound device provides advanced imaging technology to deliver clear and detailed visuals for accurate diagnosis and patient assessment."
     },
     {
         id: 5,
         title: "Blood Gas Analyzer",
-        imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7NAhR4hCgmLEyVs5pI1-pn5MjuqSkNS3d9Q&s",
-        description: "Discover how to find inner peace and serenity during difficult times through faith."
+        imageUrl: "https://www.mmsmedlab.com/wp-content/uploads/2020/01/Wondfo-Bloog-Gas-Analyzer-ABG-Analyzer.jpg",
+        description: "The Blood Gas Analyzer is an essential medical device that delivers rapid and precise measurements of blood gases, including pH, carbon dioxide, and oxygen levels."
     },
     {
         id: 6,
         title: "Electrocardiogram(ECG)",
-        imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRj1DDtGGQPL4cqNhetS7vvy8k-DDUwRX40zA&s",
-        description: "Discover how to find inner peace and serenity during difficult times through faith."
+        imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdwNIamlV3PcSZh8OP7UP5tEC0omD-1Cw_eA&s",
+        description: "The ECG Machine is a vital diagnostic tool that monitors and records the electrical activity of the heart."
     },
     {
         id: 7,
         title: "Patient Monitor",
-        imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYsPGGJeUtVu9utCvvZxAjCndpXpBGtGdWCw&s",
-        description: "Discover how to find inner peace and serenity during difficult times through faith."
+        imageUrl: "https://5.imimg.com/data5/IO/QC/SQ/SELLER-8331999/comen-c50-multi-parameter-patient-monitor-500x500.jpg",
+        description: "The Patient Monitor is a crucial medical device designed to continuously track and display vital signs, including heart rate, blood pressure, oxygen saturation, and respiratory rate."
     },
     
 
@@ -62,22 +62,21 @@ const AllProducts = () => {
         <div className="container mx-auto px-4 lg:my-52">
             
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:h-[20rem} my-10 lg:-my-20">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {sermons.map(sermon => (
-                    <div key={sermon.id} className="bg-white shadow-xl  border-gray-200 scroll-animation rounded-lg overflow-hidden ">
-                        
+                    <div key={sermon.id} className="bg-white shadow-xl border-gray-200 rounded-lg overflow-hidden">
                         {/* Sermon Image */}
                         <div className="relative w-full h-56">
                             <img
                                 src={sermon.imageUrl}
                                 alt={sermon.title}
-                                className="absolute top-0 left-0 w-full h-full object-cover"
+                                className="absolute top-0 left-0 w-full h-full object-fit"
                             />
                         </div>
 
                         {/* Title and Accordion Button */}
                         <div className="flex justify-between items-center p-4 bg-white">
-                            <h3 className="text-lg font-thin text-black">{sermon.title}</h3>
+                            <h3 className="text-lg font-bold poppins text-gray-800">{sermon.title}</h3>
                             <button onClick={() => toggleAccordion(sermon.id)} className="text-xl">
                                 {expandedId === sermon.id ? (
                                     <FontAwesomeIcon icon={faChevronUp} />
@@ -88,7 +87,9 @@ const AllProducts = () => {
                         </div>
 
                         {/* Accordion Content */}
-                        <div className={`overflow-hidden transition-max-height duration-500 z-50 ease-in-out ${expandedId === sermon.id ? 'max-h-96' : 'max-h-0'}`}>
+                        <div
+                            className={`overflow-hidden transition-max-height duration-500 ease-in-out ${expandedId === sermon.id ? 'max-h-screen' : 'max-h-0'}`}
+                        >
                             <p className="p-4 text-black">{sermon.description}</p>
                         </div>
                     </div>

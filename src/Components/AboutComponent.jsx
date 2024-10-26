@@ -39,21 +39,21 @@ function AboutComponent() {
     <div className="container mx-auto px-4 lg:my-32">
       <div className="flex flex-col md:flex-row gap-6 py-16">
         <div
-          className="flex flex-col justify-center gap-8 w-full md:w-1/2 transform-start"
+          className="flex flex-col justify-center gap-8 w-full md:w-1/2 transform-start scroll-animation"
           ref={el => el && elementsRef.current.push(el)} // Use ref for this section
         >
           <span className="text-center lg:text-start lg:text-2xl">
             <p className="uppercase font-thin text-center fontstyle text-blue-400">Our Mission</p>
           </span>
-          <h2 className="poppins font-normal uppercase text-black  text-base md:text-lg lg:text-4xl fontstyle">
-            Leading Pharmaceutical Product Supply
+          <h2 className="poppins font-normal uppercase text-black  text-base md:text-lg lg:text-2xl fontstyle">
+             Medical Product Supply
           </h2>
           <p className="poppins font-normal text-[#686868] text-base md:text-lg lg:text-xl fontstyle">
             At Margo Medical Pharma PLC, we are dedicated to providing a comprehensive range of pharmaceutical products to meet the needs of healthcare professionals and institutions. Our commitment to quality and excellence ensures that our partners receive only the best products available in the market.
           </p>
         </div>
 
-        <div className="flex w-full md:w-1/2 relative">
+        <div className="flex w-full md:w-1/2 relative scroll-animation">
           <div className="relative w-full lg:w-[32rem] transform-start">
             <div className=" rounded-lg  shadow-2xl shadow-blue-400 overflow-hidden"> {/* Frame styling */}
               <img src={missionimg} className="object-cover w-fit" alt="Home Background" />

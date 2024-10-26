@@ -36,7 +36,7 @@ function OurCompanyComponent() {
 
   return (
     <div className="container mx-auto px-4 lg:px-12 lg:my-24">
-      <div className="flex flex-col md:flex-row gap-10 py-10 items-center">
+      <div className="flex flex-col md:flex-row gap-10 py-10 items-center scroll-animation">
         
         {/* Text Section */}
         <div
@@ -45,10 +45,10 @@ function OurCompanyComponent() {
             if (el) elementsRef.current[0] = el;
           }}
         >
-          <span className="text-lg lg:text-2xl text-blue-600 uppercase font-light tracking-wider">
+          <span className="text-lg lg:text-2xl text-blue-600 uppercase font-light poppins fontstyle tracking-wider">
             Our Company
           </span>
-          <h2 className="text-2xl md:text-3xl lg:text-5xl font-semibold text-gray-800">
+          <h2 className="text-2xl md:text-3xl poppins fontstyle  lg:text-3xl font-semibold text-gray-800">
             Committed to Excellence
           </h2>
           <p className="text-gray-600 text-base md:text-lg lg:text-xl leading-relaxed">
@@ -68,7 +68,7 @@ function OurCompanyComponent() {
           }}
         >
           <div className="w-full lg:w-[30rem] lg:h-[20rem]   rounded-lg shadow-lg overflow-hidden">
-            <img src="https://blog.peoplesearch.jobs/wp-content/uploads/2021/10/taiwan-pharmaceutical-sector-PeopleSearch.jpg" className="object-cover w-full h-auto lg:h-[20rem]" alt="Our Company" />
+            <img src="https://talema.com/wp-content/uploads/blog/medical-device/medical-devices-hospital.jpg" className="object-cover w-full h-auto lg:h-[20rem]" alt="Our Company" />
           </div>
         </div>
       </div>

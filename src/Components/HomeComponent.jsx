@@ -37,7 +37,7 @@ function HomeComponent() {
               style={fadeInLeftStyle} // Applying the fade-in effect
             >
               <p className="text-white font-semibold inline-block uppercase relative font-rajdhani text-sm lg:text-xl md:text-lg fontstyle">
-                PHARMACEUTICAL SERVICES
+                MEDICAL RETAIL SERVICES
               </p>
               <div className="flex">
                 <div className="bg-white relative opacity-50 lg:w-[269px] sm:w-[100px] w-32 h-[2px]"></div>

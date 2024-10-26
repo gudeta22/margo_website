@@ -9,21 +9,27 @@ function NavProduct() {
 
   return (
     <div
-      className="relative w-full  h-10 lg:h-[20rem] px-20 py-32 flex justify-center bg-fixed"
+      className="relative w-full h-40 lg:h-[20rem] px-10 lg:px-20 py-32 flex justify-center items-center bg-fixed"
       style={{
         backgroundImage: `url(${productbg})`, // Use the imported image
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
     >
-      <div className="absolute inset-0 bg-black opacity-80" /> {/* Overlay for opacity */}
-      <div className="w-auto my-5 flex justify-center items-center flex-col text-center relative z-10">
-        {/* Products Heading */}
-        <div className="text-white text-lg lg:text-5xl md:text-5xl font-thin">
-          <div className="fontstyle ">Products</div>
-        </div>
+      {/* Overlay for opacity */}
+      <div className="absolute inset-0 bg-black opacity-70" /> 
+
+      {/* Text Content */}
+      <div className="w-full max-w-4xl mx-auto flex justify-center items-center flex-col text-center relative z-10 space-y-5">
+        {/* Heading */}
+        <h1 className="text-white text-3xl md:text-4xl lg:text-5xl font-semibold">
+          Products
+        </h1>
+
+        {/* Subheading / Description */}
         <p className="poppins font-light text-white text-sm md:text-lg lg:text-xl leading-relaxed max-w-3xl">
-          Join us in our commitment to enhancing healthcare through quality pharmaceutical products and innovative solutions.
+        Our product offers high-quality solutions designed to meet your everyday needs. With a focus on reliability and performance, 
+        it's perfect for enhancing your daily life
         </p>
       </div>
     </div>

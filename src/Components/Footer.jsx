@@ -8,7 +8,7 @@ function Footer() {
   return (
     <div>
       <footer
-        className="relative bg-blue-600 w-full px-10 py-20"
+        className="relative bg-blue-600 w-full px-10 py-2"
         style={{
           backgroundSize: "cover",
           backgroundPosition: "center",

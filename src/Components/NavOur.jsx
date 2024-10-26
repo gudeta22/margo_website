@@ -28,7 +28,8 @@ function NavService() {
 
         {/* Subheading / Description */}
         <p className="poppins font-light text-white text-sm md:text-lg lg:text-xl leading-relaxed max-w-3xl">
-          Join us in our commitment to enhancing healthcare through quality pharmaceutical products and innovative solutions.
+        we specialize in providing high-quality medical products and equipment to enhance health and well-being. Our commitment to reliability and customer 
+        satisfaction ensures that individuals and healthcare providers have access to the essential tools they need for optimal care."
         </p>
       </div>
     </div>

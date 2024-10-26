@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTools, faHeartbeat, faBriefcaseMedical, faCloudUploadAlt } from '@fortawesome/free-solid-svg-icons';
+import { faTools, faWrench, faTrashAlt, faCloudUploadAlt } from '@fortawesome/free-solid-svg-icons';
 
 const data = [
   {
@@ -16,26 +16,26 @@ const data = [
     id: 2,
     title: 'Maintenance',
     description: [
-      'Our dedicated team innovates and develops new treatments.',
-      'We aim to improve patient outcomes and quality of life.',
+      'Our maintenance service ensures that your equipment, systems, and structures stay in peak condition.',
+      
     ],
-    icon: faHeartbeat,
+    icon: faWrench,
   },
   {
     id: 3,
     title: 'Decommission',
     description: [
-      'We provide efficient distribution of pharmaceutical products.',
-      'Ensuring timely access to essential medications is our priority.',
+      'Our decommissioning service provides a safe and efficient process for the retirement of equipment, systems, or facilities.',
+      
     ],
-    icon: faBriefcaseMedical,
+    icon: faTrashAlt,  // Updated to the recycle bin icon
   },
   {
     id: 4,
     title: 'Software Upgrade',
     description: [
-      'We engage in community health programs promoting wellness.',
-      'Our aim is to provide access to healthcare resources for underserved populations.',
+      'Our decommissioning service offers a safe and efficient approach to retiring equipment, systems, or facilities.',
+      
     ],
     icon: faCloudUploadAlt,
   },
@@ -47,7 +47,7 @@ const ServiceComponents = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="container mx-auto py-12 px-4 my-10"
+      className="container mx-auto py-12 px-4 my-10 scroll-animation "
     >
       <div className="flex flex-col items-center text-center gap-4 py-7">
         <span className="flex items-center font-bold justify-center">
@@ -81,14 +81,14 @@ const InvolvementCard = ({ icon, title, description, delay }) => (
     initial={{ opacity: 0, y: 50 }}
     animate={{ opacity: 1, y: 0 }}
     transition={{ delay: delay, duration: 0.5 }}
-    className="relative bg-white rounded-lg shadow-lg text-black text-center p-5 overflow-hidden transition-colors duration-300 ease-in-out hover:bg-blue-500 hover:text-white"
+    className="relative bg-white rounded-lg scroll-animation shadow-lg text-black text-center p-5 overflow-hidden transition-colors duration-300 ease-in-out hover:bg-blue-500 hover:text-white"
   >
     {/* Card content */}
-    <div className="relative z-10">
+    <div className="relative z-10 ">
       {/* Icon */}
       <div className="mb-4 group">
-  <FontAwesomeIcon icon={icon} className="text-4xl text-black hover:text-white transition-colors duration-300" />
-</div>
+        <FontAwesomeIcon icon={icon} className="text-4xl text-black hover:text-white transition-colors duration-300" />
+      </div>
       <h3 className="text-lg lg:text-xl md:text-xl sm:text-lg m-5 font-thin uppercase mb-2">
         {title}
       </h3>
