@@ -59,7 +59,7 @@ const AllProducts = () => {
     };
 
     return (
-        <div className="container mx-auto px-4 lg:my-52">
+        <div className="container mx-auto px-4 my-10 lg:my-52">
             
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
