@@ -62,7 +62,7 @@ const AllProducts = () => {
         <div className="container mx-auto px-4 my-10 lg:my-52">
             
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 scroll-animation">
                 {sermons.map(sermon => (
                     <div key={sermon.id} className="bg-white shadow-xl border-gray-200 rounded-lg overflow-hidden">
                         {/* Sermon Image */}
