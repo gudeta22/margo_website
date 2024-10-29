@@ -74,7 +74,7 @@ const data = [
       className="relative bg-white rounded-lg scroll-animation shadow-lg text-black text-center p-5 overflow-hidden transition-colors duration-300 ease-in-out hover:bg-blue-500 hover:text-white"
     >
       {/* Card content */}
-      <div className="relative z-10 ">
+      <div className="relative z-10 scroll-animation ">
         {/* Icon */}
         <div className="mb-4 group">
           <FontAwesomeIcon icon={icon} className="text-4xl text-black hover:text-white transition-colors duration-300" />

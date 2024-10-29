@@ -1,9 +1,14 @@
-import React from 'react';
+import React , {useEffect} from 'react';
 import { motion } from 'framer-motion';
 import { MdLocationOn, MdPhone, MdEmail } from 'react-icons/md';
 import MapComponent from './MapComponent';
 
 const ContactComponent = () => {
+  useEffect(() => {
+    // Scroll to the top of the page when the component is mounted
+    window.scrollTo(0, 0);
+  }, []); // Empty dependency array ensures this runs only once
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -22,7 +27,7 @@ const ContactComponent = () => {
               Contact Us
             </span>
           </div>
-          <h1 className="poppins font-normal  text-black  md:text-lg lg:text-2xl fontstyle text-lg">
+          <h1 className="poppins font-thin   text-gray-700  md:text-lg lg:text-2xl fontstyle text-lg">
             Whether you have a question or just want to say hello, we’re here for you. Reach out to us anytime!
           </h1>
         </div>
