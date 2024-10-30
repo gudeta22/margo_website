@@ -9,6 +9,7 @@ import Home from './Pages/Home.jsx';
 import Services from './Pages/Services.jsx';
 import Footer from './Components/Footer.jsx';
 import loadingLogo from './assets/Photos/margo-01.png'; // Adjust the path as needed
+import BackToTop from './Components/BackToTop.jsx';
 
 function App() {
   const [loading, setLoading] = useState(true); // State to track loading

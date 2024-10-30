@@ -43,6 +43,29 @@ body {
     transform: rotate(360deg); /* End position */
   }
 }
+.back-to-top {
+  position: fixed; /* Fixed position */
+  bottom: 20px; /* Distance from bottom */
+  right: 20px; /* Distance from right */
+  background-color: #3498db; /* Button background color */
+  color: white; /* Text color */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  padding: 10px; /* Padding */
+  cursor: pointer; /* Pointer cursor */
+  font-size: 24px; /* Increase font size for the icon */
+  transition: background-color 0.3s; /* Transition for hover effect */
+  display: flex; /* Flexbox for alignment */
+  align-items: center; /* Center icon vertically */
+  justify-content: center; /* Center icon horizontally */
+  width: 50px; /* Set a fixed width */
+  height: 50px; /* Set a fixed height */
+}
+
+.back-to-top:hover {
+  background-color: #2980b9; /* Darker blue on hover */
+}
+
 
 
 .gradient-bg {

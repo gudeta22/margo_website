@@ -1,5 +1,6 @@
 import React from "react";
 import { FaTiktok, FaYoutube, FaTelegramPlane } from "react-icons/fa"; // Import React Icons
+import BackToTop from "./BackToTop";
 
 function Footer() {
   const currentDate = new Date();
@@ -81,6 +82,7 @@ function Footer() {
             </div>
           </div>
         </div>
+        <BackToTop />
       </footer>
     </div>
   );
