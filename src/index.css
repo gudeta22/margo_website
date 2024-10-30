@@ -16,7 +16,9 @@ body {
   background-color: rgb(255, 255, 255); /* Optional: Set a background color */
   position: relative; /* Positioning for the loader circle */
 }
-
+.bgfooter{
+  background-color: #1869a0;
+}
 .loader-circle {
   width: 120px; /* Adjust as needed */
   height: 120px; /* Adjust as needed */
@@ -46,12 +48,12 @@ body {
 .back-to-top {
   position: fixed; /* Fixed position */
   bottom: 20px; /* Distance from bottom */
-  right: 20px; /* Distance from right */
+  right: 30px; /* Distance from right */
   background-color: #3498db; /* Button background color */
   color: white; /* Text color */
   border: none; /* No border */
   border-radius: 5px; /* Rounded corners */
-  padding: 10px; /* Padding */
+  padding: 8px; /* Padding */
   cursor: pointer; /* Pointer cursor */
   font-size: 24px; /* Increase font size for the icon */
   transition: background-color 0.3s; /* Transition for hover effect */

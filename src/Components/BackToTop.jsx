@@ -30,7 +30,7 @@ const BackToTop = () => {
       {showButton && (
         <button 
           onClick={scrollToTop} 
-          className="back-to-top" // You can style this class
+          className="back-to-top " // You can style this class
         >
           <FontAwesomeIcon icon={faChevronUp} /> {/* Display the icon */}
         </button>
