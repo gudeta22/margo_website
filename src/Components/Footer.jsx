@@ -17,7 +17,7 @@ function Footer() {
         }}
       >
         <div className="mx-auto w-full max-w-screen-xl text-white">
-          <div className="grid grid-cols-1 gap-6 px-4 lg:py-3 py-5 md:grid-cols-3 lg:grid-cols-4">
+          <div className="grid grid-cols-1 gap-6 px-4 lg:py-3 py-2 md:grid-cols-3 lg:grid-cols-4">
             {/* Logo and Description */}
             <div className="flex flex-col items-start lg:items-center">
               <img
