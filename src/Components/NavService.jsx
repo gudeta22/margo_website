@@ -6,7 +6,7 @@ function NavService() {
     // Scroll to the top of the page when the component is mounted
     window.scrollTo(0, 0);
   }, []); // Empty dependency array ensures this runs only once
-
+  
   return (
     <div
       className="relative w-full h-40 lg:h-[20rem] px-10 lg:px-20 py-32 flex justify-center items-center bg-fixed"

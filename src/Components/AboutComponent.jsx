@@ -3,10 +3,8 @@ import missionimg from '../assets/Photos/missionimg.jpg';
 
 function AboutComponent() {
   const elementsRef = useRef([]); // Store references to all elements we want to animate
-
   useEffect(() => {
     window.scrollTo(0, 0);
-
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -17,15 +15,12 @@ function AboutComponent() {
       },
       { threshold: 0.1 } // Trigger when 10% of the element is in view
     );
-
     const currentElements = elementsRef.current;
-
     currentElements.forEach((el) => {
       if (el) {
         observer.observe(el);
       }
     });
-
     return () => {
       currentElements.forEach((el) => {
         if (el) {
@@ -34,7 +29,6 @@ function AboutComponent() {
       });
     };
   }, []);
-
   return (
     <div className="container mx-auto px-4 lg:my-32">
       <div className="flex flex-col md:flex-row gap-6 py-16">

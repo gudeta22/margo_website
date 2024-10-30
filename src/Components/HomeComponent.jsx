@@ -10,13 +10,11 @@ function HomeComponent() {
       setFadeIn(true);
     }, 100); // Delay the animation slightly if needed
   }, []);
-
   const fadeInLeftStyle = {
     opacity: fadeIn ? 1 : 0,
     transform: fadeIn ? "translateX(0)" : "translateX(-100%)",
     transition: "all 1.5s ease-out",
   };
-
   return (
     <section className="">
       <div
