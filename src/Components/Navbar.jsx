@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { FaBars, FaTimes } from 'react-icons/fa';
+import logo from '../assets/Photos/margo-01.png';
 
 const Navbar = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -22,7 +23,6 @@ const Navbar = () => {
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
-      console.log('Scroll Position:', scrollPosition); // Debugging log
       setIsScrolled(scrollPosition > 50);
     };
 
@@ -34,18 +34,25 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`bg-blue-500 text-white p-4 shadow-md sticky top-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-blue-500 shadow-lg text-black ' : ''
+      className={`bg-white text-black p-4 shadow-md sticky top-0 z-50 transition-all duration-300 ${
+        isScrolled ? 'bg-blue-500 shadow-lg text-black' : ''
       }`}
+      style={{ height: '80px' }} // Set a fixed height for the navbar
     >
-      <div className="container mx-auto flex justify-between items-center">
+      <div className="container mx-auto flex justify-between items-center h-full"> {/* Use h-full to ensure full height */}
         <motion.div
-          className="text-2xl font-bold"
+          className="relative h-32 w-32 font-bold flex items-center"
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <Link to="/">Logo</Link>
+          <Link to="/" className="flex items-center justify-center h-full w-full">
+            <img
+              src={logo}
+              alt="logo"
+              className="h-80 w-80 object-contain" // Adjust size as needed
+            />
+          </Link>
         </motion.div>
 
         <ul className="hidden md:flex space-x-8">
@@ -55,12 +62,12 @@ const Navbar = () => {
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 * index, duration: 0.5 }}
-              className="group relative transition-transform duration-300 ease-in-out transform"
+              className="group relative hover:text-blue-600 transition-transform duration-300 ease-in-out transform"
             >
               <Link to={item.path} className="hover:scale-y-150 transition-colors duration-300">
                 {item.name}
               </Link>
-              <div className="bg-white rounded-md w-0 group-hover:w-[100%] transition-all duration-300 ease-in-out h-[2px] absolute bottom-0 left-0" />
+              <div className="bg-blue-500 rounded-md w-0 group-hover:w-[100%] transition-all duration-300 ease-in-out h-[2px] absolute bottom-0 left-0" />
             </motion.li>
           ))}
         </ul>

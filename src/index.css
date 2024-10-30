@@ -7,6 +7,48 @@
 body {
   font-family: 'Poppins', sans-serif;
 } */
+/* Add this to your CSS file (e.g., App.css or a separate CSS file) */
+/* Add this to your CSS file (e.g., App.css or a separate CSS file) */
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+  background-color: white; /* Optional: Set a background color */
+  position: relative; /* Positioning for the loader circle */
+}
+
+.loader-circle {
+  width: 120px; /* Adjust as needed */
+  height: 120px; /* Adjust as needed */
+  border: 8px solid transparent; /* Base border color */
+  border-radius: 50%; /* Make it circular */
+  border-top-color: #3498db; /* Color of the spinning part */
+  animation: spin 1s linear infinite; /* Spinning effect for the border */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative; /* Allow positioning of child elements */
+}
+
+.loader img {
+  width: 100px; /* Adjust logo size */
+  height: auto; /* Maintain aspect ratio */
+  position: absolute; /* Position logo in center */
+  z-index: 1; /* Ensure logo is on top of the loader circle */
+  animation: none; /* Ensure no animation is applied to the logo */
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg); /* Start position */
+  }
+  100% {
+    transform: rotate(360deg); /* End position */
+  }
+}
+
+
 
 .gradient-bg {
 
