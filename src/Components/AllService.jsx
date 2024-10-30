@@ -71,10 +71,10 @@ const data = [
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: delay, duration: 0.5 }}
-      className="relative bg-white rounded-lg scroll-animation shadow-lg text-black text-center p-5 overflow-hidden transition-colors duration-300 ease-in-out hover:bg-blue-500 hover:text-white"
+      className="relative bg-white rounded-lg scroll-animation shadow-lg text-black text-center p-5 overflow-hidden transition-colors duration-300 ease-in-out hover:bg-blue-500 hover:text-white scroll-animation"
     >
       {/* Card content */}
-      <div className="relative z-10 scroll-animation ">
+      <div className="relative z-10 ">
         {/* Icon */}
         <div className="mb-4 group">
           <FontAwesomeIcon icon={icon} className="text-4xl text-black hover:text-white transition-colors duration-300" />
