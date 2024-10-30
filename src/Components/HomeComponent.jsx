@@ -46,14 +46,15 @@ function HomeComponent() {
     }, 20); // Adjust the speed of counting
   };
 
-  const fadeInLeftStyle = {
+  // Modified to achieve a bottom-to-top animation
+  const fadeInBottomStyle = {
     opacity: fadeIn ? 1 : 0,
-    transform: fadeIn ? "translateY(0)" : "translateY(20px)",
+    transform: fadeIn ? "translateY(0)" : "translateY(20px)", // From below
     transition: "opacity 0.5s ease-out, transform 0.5s ease-out",
   };
 
   return (
-    <section className="">
+    <section>
       <div
         className="relative h-[45rem] lg:h-screen w-full overflow-hidden bg-fixed"
         style={{
@@ -69,7 +70,7 @@ function HomeComponent() {
           <div className="px-4 absolute md:my-20 lg:my-32 my-16">
             <div
               className="w-full pt-[5rem] md:gap-6 flex flex-col gap-3 md:gap-5"
-              style={fadeInLeftStyle} // Applying the fade-in effect
+              style={fadeInBottomStyle} // Applying the bottom-to-top fade-in effect
             >
               <p className="text-white font-semibold inline-block uppercase relative font-rajdhani text-xs sm:text-sm md:text-lg lg:text-xl fontstyle">
                 MEDICAL RETAIL SERVICES
