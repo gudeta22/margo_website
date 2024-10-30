@@ -1,6 +1,7 @@
 import React from "react";
-import { FaTiktok, FaYoutube, FaTelegramPlane } from "react-icons/fa"; // Import React Icons
+import { FaTiktok, FaYoutube, FaTelegramPlane } from "react-icons/fa";
 import BackToTop from "./BackToTop";
+import logo from "../assets/Photos/margo-footer.png"; // Adjust the path to your logo image
 
 function Footer() {
   const currentDate = new Date();
@@ -9,19 +10,24 @@ function Footer() {
   return (
     <div>
       <footer
-        className="relative bgfooter  w-full px-10 py-2"
+        className="relative bgfooter w-full px-10 py-2"
         style={{
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
       >
         <div className="mx-auto w-full max-w-screen-xl text-white">
-          <div className="grid grid-cols-1 gap-8 px-4 lg:py-8 md:grid-cols-3 lg:grid-cols-4">
-            <div className="md:sr-only flex flex-col grow-2 w-[8rem] justify-start">
-              <div className="flex select-none">
-                Logo {/* Placeholder for the logo */}
-              </div>
+          <div className="grid grid-cols-1 gap-6 px-4 lg:py-3 py-5 md:grid-cols-3 lg:grid-cols-4">
+            {/* Logo and Description */}
+            <div className="flex flex-col items-start lg:items-center">
+              <img
+                src={logo}
+                alt="Company Logo"
+                className="w-48 h-auto lg:w-[12rem]"
+              />
+              
             </div>
+
             <div>
               <h2 className="mb-6 text-sm font-thin text-white uppercase lg:text-lg">
                 Contacts
@@ -47,6 +53,7 @@ function Footer() {
                 <li className="mb-4">Electrocardiogram (ECG)</li>
               </ul>
             </div>
+
             <div>
               <h2 className="mb-6 text-sm font-thin text-white uppercase lg:text-lg">
                 Services
@@ -58,28 +65,18 @@ function Footer() {
                 <li className="mb-4">Software Update</li>
               </ul>
             </div>
-
-            <div className="container mx-auto flex flex-col md:flex-row justify-between text-white">
-              <div className="flex flex-col grow md:-my-10">
-                <div className="flex mb-0 mx-20 items-end select-none my-7">
-                  Logo {/* Placeholder for the logo */}
-                </div>
-              </div>
-            </div>
           </div>
+
           <div className="bg-white lg:w-full lg:h-[0.1px]"></div>
           <div className="px-4 py-6 bg-transparent md:flex md:items-center md:space-x-16 my-6">
             <span className="text-sm text-white sm:text-center">
               <span>©{currentYear}</span>{" "}
               <a href="/ourcompany" className="text-white">
-              MARGOMEDICALPHARMA™
+                MARGOMEDICALPHARMA™
               </a>
               . All Rights Reserved.
             </span>
-            <div className="flex mt-4 lg:sr-only md:not-sr-only space-x-6 sm:justify-center md:mt-0">
-              
-             
-            </div>
+           
           </div>
         </div>
         <BackToTop />
