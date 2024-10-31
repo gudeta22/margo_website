@@ -19,18 +19,17 @@
     <meta property="og:url" content="https://margomedical.com/app/" />
     <meta property="og:title" content="Margo Medical Pharma - Quality Medical Supplies and Pharmaceuticals" />
     <meta property="og:description" content="Your reliable partner for high-quality medical supplies and pharmaceuticals." />
-    <meta property="og:image" content="/margo-logo.png" /> <!-- Logo for Facebook -->
-    <meta property="og:site_name" content="Margo Medical Pharma" />
+    <meta property="og:image" content="https://margomedical.com/margo-logo.png" /> <!-- Full URL for SEO -->
 
     <!-- Google Meta Tags -->
     <meta itemprop="name" content="Margo Medical Pharma - Quality Medical Supplies and Pharmaceuticals">
     <meta itemprop="description" content="Margo Medical Pharma - Your trusted partner in medical supplies, offering a wide range of pharmaceutical products with a commitment to quality and care.">
-    <meta itemprop="image" content="/margo-logo.png"> <!-- Logo for Google -->
+    <meta itemprop="image" content="https://margomedical.com/margo-logo.png"> <!-- Full URL for SEO -->
 
     <!-- Telegram Meta Tag -->
     <meta property="telegram:channel" content="@margomedical" />
     <meta property="telegram:card" content="summary_large_image" />
-    <meta property="telegram:image" content="/margo-logo.png" /> <!-- Logo for Telegram -->
+    <meta property="telegram:image" content="https://margomedical.com/margo-logo.png" /> <!-- Full URL for SEO -->
 
     <!-- Structured Data (JSON-LD) for SEO -->
     <script type="application/ld+json">
@@ -39,7 +38,7 @@
         "@type": "Organization",
         "name": "Margo Medical Pharma",
         "url": "https://margomedical.com",
-        "logo": "/margo-logo.png", // Updated path for logo
+        "logo": "https://margomedical.com/margo-logo.png",
         "sameAs": [
           "https://facebook.com/margomedical",
           "https://twitter.com/margomedical",
@@ -50,7 +49,7 @@
         "contactPoint": [
           {
             "@type": "ContactPoint",
-            "telephone": "0916909605",
+            "telephone": "+251-916-909605",
             "contactType": "Customer Service",
             "areaServed": "US",
             "availableLanguage": "English"
@@ -62,10 +61,32 @@
           "addressLocality": "Addis Ababa",
           "addressRegion": "Oromia",
           "postalCode": "1000",
-          "addressCountry": "Eth"
+          "addressCountry": "ET"
         }
       }
     </script>
+
+    <!-- Website Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "url": "https://margomedical.com",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://margomedical.com/search?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      }
+    </script>
+
+    <!-- Preload Key Resources -->
+    <link rel="preload" href="/margo-logo.png" as="image" />
+    <link rel="preload" href="/src/main.jsx" as="script" />
+
+    <!-- Sitemap -->
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
+
   </head>
   <body>
     <div id="root"></div>

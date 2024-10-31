@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { FaBars, FaTimes } from 'react-icons/fa';
+import { FaBars, FaTimes, FaTelegramPlane, FaLinkedin } from 'react-icons/fa';
 import logo from '../assets/Photos/margo-01.png';
 
 const Navbar = () => {
@@ -37,9 +37,9 @@ const Navbar = () => {
       className={`bg-white text-black p-4 shadow-md sticky top-0 z-50 transition-all duration-300 ${
         isScrolled ? 'bg-blue-500 shadow-lg text-black' : ''
       }`}
-      style={{ height: '80px' }} // Set a fixed height for the navbar
+      style={{ height: '80px' }}
     >
-      <div className="container mx-auto flex justify-between items-center h-full"> {/* Use h-full to ensure full height */}
+      <div className="container mx-auto flex justify-between items-center h-full">
         <motion.div
           className="relative h-32 w-32 font-bold flex items-center"
           initial={{ opacity: 0, x: -50 }}
@@ -50,7 +50,7 @@ const Navbar = () => {
             <img
               src={logo}
               alt="logo"
-              className="h-80 w-80 object-contain" // Adjust size as needed
+              className="h-80 w-80 object-contain"
             />
           </Link>
         </motion.div>
@@ -71,6 +71,16 @@ const Navbar = () => {
             </motion.li>
           ))}
         </ul>
+
+        {/* Social Media Icons */}
+        <div className="hidden md:flex space-x-4">
+          <a href="https://www.linkedin.com/company/remake-healthcare/" target="_blank" rel="noopener noreferrer">
+            <FaLinkedin size={24} className="text-blue-500 hover:text-blue-700 transition duration-300" />
+          </a>
+          <a href="https://t.me/margopharma" target="_blank" rel="noopener noreferrer">
+            <FaTelegramPlane size={24} className="text-blue-400 hover:text-blue-600 transition duration-300" />
+          </a>
+        </div>
 
         <motion.div
           className="md:hidden text-2xl"
@@ -118,6 +128,15 @@ const Navbar = () => {
               </Link>
             </motion.li>
           ))}
+          {/* Social Media Icons for Mobile */}
+          <div className="flex justify-center space-x-4 mt-4">
+            <a href="https://www.linkedin.com/company/remake-healthcare/" target="_blank" rel="noopener noreferrer">
+              <FaLinkedin size={24} className="text-white hover:text-blue-500 transition duration-300" />
+            </a>
+            <a href="https://t.me/margopharma" target="_blank" rel="noopener noreferrer">
+              <FaTelegramPlane size={24} className="text-white hover:text-blue-300 transition duration-300" />
+            </a>
+          </div>
         </motion.ul>
       )}
     </nav>

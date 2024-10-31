@@ -1,5 +1,5 @@
 import React from "react";
-import { FaTiktok, FaYoutube, FaTelegramPlane } from "react-icons/fa";
+import { FaTiktok, FaYoutube, FaTelegramPlane, FaLinkedin } from "react-icons/fa";
 import BackToTop from "./BackToTop";
 import logo from "../assets/Photos/margo-footer.png"; // Adjust the path to your logo image
 
@@ -18,16 +18,25 @@ function Footer() {
       >
         <div className="mx-auto w-full max-w-screen-xl text-white">
           <div className="grid grid-cols-1 gap-6 px-4 lg:py-3 py-2 md:grid-cols-3 lg:grid-cols-4">
-            {/* Logo and Description */}
+            {/* Logo and Social Media Icons */}
             <div className="flex flex-col items-start lg:items-center">
               <img
                 src={logo}
                 alt="Company Logo"
                 className="w-48 h-auto lg:w-[12rem]"
               />
-              
+              {/* Social Media Icons Below Logo */}
+              <div className="flex space-x-4 -mt-8">
+                <a href="https://www.linkedin.com/company/remake-healthcare/" target="_blank" rel="noopener noreferrer">
+                  <FaLinkedin size={24} className="text-white hover:text-blue-500" />
+                </a>
+                <a href="https://t.me/margopharma" target="_blank" rel="noopener noreferrer">
+                  <FaTelegramPlane size={24} className="text-white hover:text-blue-400" />
+                </a>
+              </div>
             </div>
 
+            {/* Contacts Section */}
             <div>
               <h2 className="mb-6 text-sm font-thin text-white uppercase lg:text-lg">
                 Contacts
@@ -39,6 +48,7 @@ function Footer() {
               </ul>
             </div>
 
+            {/* Products Section */}
             <div>
               <h2 className="mb-6 text-sm font-thin text-white uppercase lg:text-lg">
                 Our Products
@@ -54,6 +64,7 @@ function Footer() {
               </ul>
             </div>
 
+            {/* Services Section */}
             <div>
               <h2 className="mb-6 text-sm font-thin text-white uppercase lg:text-lg">
                 Services
@@ -76,7 +87,6 @@ function Footer() {
               </a>
               . All Rights Reserved.
             </span>
-           
           </div>
         </div>
         <BackToTop />
