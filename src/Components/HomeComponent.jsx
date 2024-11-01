@@ -66,25 +66,19 @@ function HomeComponent() {
         {/* Add a strong black overlay */}
         <div className="absolute inset-0 bg-black opacity-60"></div>
 
-        <div className="container m-auto relative z-10">
-          <div className="px-4 absolute md:my-20 lg:my-32 my-16">
+        <div className="container m-auto relative z-10 flex flex-col justify-start items-center h-full">
+          <div className="px-4 my-20">
             <div
-              className="w-full pt-[5rem] flex flex-col gap-3 md:gap-5"
+              className="w-full flex flex-col gap-3 md:gap-5"
               style={fadeInBottomStyle} // Applying the bottom-to-top fade-in effect
             >
-              <p className="text-white font-semibold inline-block uppercase relative font-rajdhani text-xs sm:text-sm md:text-lg lg:text-xl fontstyle">
-                MEDICAL RETAIL SERVICES
-              </p>
-              <div className="flex">
-                <div className="bg-white relative opacity-50 lg:w-[269px] sm:w-[100px] w-24 h-[2px]"></div>
-                <div className="bg-blue-500 w-[50px] sm:w-[70px] absolute z-10 h-[2px]"></div>
-              </div>
-              <h1 className="text-white text-[24px] sm:text-[32px] md:text-8xl lg:text-6xl font-thin fontstyle leading-tight uppercase">
+            
+              <h1 className="text-white text-[24px] sm:text-[32px] md:text-8xl lg:text-6xl font-thin fontstyle leading-tight uppercase text-center">
                 Driven by
                 <br />
                 Compassion & Care
               </h1>
-              <p className="text-gray-200 text-sm sm:text-md md:text-lg lg:text-xl font-thin lg:my-5">
+              <p className="text-gray-200 text-sm sm:text-md md:text-lg lg:text-xl font-thin lg:my-5 text-center">
                 Innovating solutions that enhance well-being and promote a healthier tomorrow.
               </p>
             </div>
@@ -94,7 +88,7 @@ function HomeComponent() {
         {/* Statistics Section */}
         <div 
           ref={statsRef}
-          className="absolute -my-4 bottom-5 sm:bottom-10 left-1/2 transform -translate-x-1/2 w-full max-w-5xl px-4"
+          className="absolute -my-4 bottom-5 sm:bottom-10 left-1/2 transform -translate-x-1/2 w-full max-w-5xl px-4 lg:my-20"
           style={{ opacity: fadeIn ? 1 : 0, transition: "opacity 0.5s ease-out" }}
         >
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-8 scroll-animation">
