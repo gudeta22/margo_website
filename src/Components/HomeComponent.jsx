@@ -91,7 +91,7 @@ function HomeComponent() {
           className="absolute -my-4 bottom-5 sm:bottom-10 left-1/2 transform -translate-x-1/2 w-full max-w-5xl px-4 lg:my-20"
           style={{ opacity: fadeIn ? 1 : 0, transition: "opacity 0.5s ease-out" }}
         >
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-8 scroll-animation">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-8 ">
             {/* Happy Clients */}
             <div className="flex flex-col items-center bg-blue-500 opacity-80 text-white py-4 sm:py-6 rounded-lg shadow-lg">
               <FaUserFriends size={24} className="sm:mb-4 mb-2" />
