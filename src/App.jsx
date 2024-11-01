@@ -1,5 +1,5 @@
 // src/App.jsx
-import React, { useEffect, useState } from 'react'; // Add useState import
+import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './Components/Navbar';
 import Product from './Pages/Product';
@@ -8,8 +8,8 @@ import Contact from './Pages/Contact.jsx';
 import Home from './Pages/Home.jsx';
 import Services from './Pages/Services.jsx';
 import Footer from './Components/Footer.jsx';
+import NotFound from './Pages/NotFound'; // Import NotFound component
 import loadingLogo from './assets/Photos/margo-01.png'; // Adjust the path as needed
-import BackToTop from './Components/BackToTop.jsx';
 
 function App() {
   const [loading, setLoading] = useState(true); // State to track loading
@@ -59,6 +59,7 @@ function App() {
         <Route path="/services" element={<Services />} />
         <Route path="/ourcompany" element={<OurCompany />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="*" element={<NotFound />} /> {/* Catch all unmatched routes */}
       </Routes>
       <Footer />
     </Router>
