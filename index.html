@@ -2,8 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/margo-logo.png" />
-    <base href="/app/" />
+    <link rel="icon" type="image/svg+xml" href="https://margomedical.com/public/margo-logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Primary Meta Tags -->
@@ -15,28 +14,59 @@
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://margomedical.com/app/" />
+    <meta property="og:url" content="https://margomedical.com" /> <!-- Use the root URL -->
     <meta property="og:title" content="Margo Medical Pharma - Quality Medical Supplies and Pharmaceuticals" />
     <meta property="og:description" content="Your reliable partner for high-quality medical supplies and pharmaceuticals." />
-    <meta property="og:image" content="/margo-logo.png" /> <!-- Use full URL -->
+    <meta property="og:image" content="https://margomedical.com/public/margo-logo.png" /> <!-- Ensure the image URL is correct and publicly accessible -->
 
-    <!-- Google Meta Tags -->
-    <meta itemprop="name" content="Margo Medical Pharma - Quality Medical Supplies and Pharmaceuticals" />
-    <meta itemprop="description" content="Margo Medical Pharma - Your trusted partner in medical supplies, offering a wide range of pharmaceutical products with a commitment to quality and care." />
-    <meta itemprop="image" content="/margo-logo.png" /> <!-- Use full URL -->
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Margo Medical Pharma - Quality Medical Supplies and Pharmaceuticals" />
+    <meta name="twitter:description" content="Your reliable partner for high-quality medical supplies and pharmaceuticals." />
+    <meta name="twitter:image" content="https://margomedical.com/public/margo-logo.png" />
 
     <!-- Structured Data -->
-   
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Margo Medical Pharma",
+        "url": "https://margomedical.com",
+        "logo": "https://margomedical.com/public/margo-logo.png",
+        "sameAs": [
+          "https://facebook.com/margomedical",
+          "https://twitter.com/margomedical",
+          "https://linkedin.com/company/remake-healthcare/",
+          "https://t.me/margopharma"
+        ],
+        "description": "Margo Medical Pharma is a trusted provider of quality medical supplies and pharmaceuticals, committed to healthcare safety and customer care.",
+        "contactPoint": [
+          {
+            "@type": "ContactPoint",
+            "telephone": "+251-916-909605",
+            "contactType": "Customer Service",
+            "areaServed": "ET",
+            "availableLanguage": "English"
+          }
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Gerji",
+          "addressLocality": "Addis Ababa",
+          "addressRegion": "Oromia",
+          "postalCode": "1000",
+          "addressCountry": "ET"
+        }
+      }
+    </script>
 
     <!-- Preload Key Resources -->
-    <link rel="preload" href="/margo-logo.png" as="image" /> <!-- Use full URL -->
-    <link rel="preload" href="/src/main.jsx" as="script" />
-    
-    <!-- Sitemap -->
-    <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
+    <link rel="preload" href="https://margomedical.com/public/margo-logo.png" as="image" />
   </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <div id="root">
+      <h1>Welcome to Margo Medical Pharma</h1>
+      <img src="https://margomedical.com/public/margo-logo.png" alt="Margo Medical Pharma Logo" style="display: block; margin: 0 auto; max-width: 100%; height: auto;" />
+    </div>
   </body>
 </html>
