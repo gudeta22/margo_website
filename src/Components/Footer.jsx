@@ -17,7 +17,7 @@ function Footer() {
         }}
       >
         <div className="mx-auto w-full max-w-screen-xl text-white">
-          <div className="grid grid-cols-1 gap-6 px-4 lg:py-3 py-2 md:grid-cols-3 lg:grid-cols-4">
+          <div className="grid grid-cols-1 gap-6 lg:gap-20 px-4 lg:py-3 py-2 md:grid-cols-3 lg:grid-cols-4">
             {/* Logo and Social Media Icons */}
             <div className="flex flex-col items-start lg:items-center">
               <img
@@ -43,7 +43,7 @@ function Footer() {
               </h2>
               <ul className="text-white font-thin md:text-sm lg:text-lg">
                 <li className="mb-4">Phone: +251916909605</li>
-                <li className="mb-4">Email: margomedicalpharmaplc@gmail.com</li>
+                <li className="mb-4">Email:margomedicalpharmaplc@gmail.com</li>
                 <li className="mb-4">Location: Addis Ababa, Ethiopia</li>
               </ul>
             </div>
