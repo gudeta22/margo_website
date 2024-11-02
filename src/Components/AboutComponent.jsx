@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import missionimg from '../assets/Photos/missionimg.jpg';
+import missionimg from '../assets/Photos/margomission.jpg';
 
 function AboutComponent() {
   const elementsRef = useRef([]); // Store references to all elements we want to animate
@@ -53,7 +53,7 @@ function AboutComponent() {
         <div className="flex w-full md:w-1/2 relative scroll-animation">
           <div className="relative w-full lg:w-fit h-full object-cover transform-start"> 
             <div className="rounded-lg shadow-2xl shadow-blue-400 overflow-hidden h-full"> {/* Frame styling */}
-              <img src="https://t4.ftcdn.net/jpg/01/89/57/79/240_F_189577923_ANoSMIVLctEun9cy9WUafBnJ2YJvds9e.jpg" className="w-full h-full object-cover" alt="Home Background" />
+              <img src={missionimg} className="w-full h-full object-cover" alt="Home Background" />
             </div>
           </div>
         </div>
