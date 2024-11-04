@@ -7,13 +7,13 @@ const sermons = [
     {
         id: 1,
         title: "Hematology Analyzer(CBC)",
-        imageUrl: "https://m.media-amazon.com/images/I/71xSomVDYEL._AC_UF1000,1000_QL80_.jpg",
+        imageUrl: "https://medicalequipment-msl.com/upload/img/20200810/202008101428259081.jpg",
         description: "A Hematology Analyzer, specifically for Complete Blood Count (CBC), is a medical device used to analyze blood samples, providing critical information on various blood components"
     },
     {
         id: 2,
         title: "Chemistry Machine",
-        imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgPZ_uhZHodhJccytOmEndiEblEFiBNMOKjg&s",
+        imageUrl: "https://ueeshop.ly200-cdn.com/u_file/UPAP/UPAP543/2302/photo/5c7aa534d9.jpg?x-oss-process=image/format,webp",
         description: "A Chemistry Machine, commonly known as a Chemistry Analyzer, is a laboratory instrument used to analyze blood and other bodily fluids to measure the concentration of various biochemical components"
     },
     {
@@ -48,7 +48,7 @@ const ProductComponent = () => {
                             <img
                                 src={sermon.imageUrl}
                                 alt={sermon.title}
-                                className="absolute top-0 left-0 w-full h-full object-fit"
+                                className="absolute top-0 left-0 w-full h-full object-cover"
                             />
                         </div>
 
