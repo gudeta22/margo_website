@@ -24,8 +24,8 @@ const ContactComponent = () => {
 
     emailjs
       .send(
-        'YOUR_SERVICE_ID', // Replace with your EmailJS Service ID
-        'YOUR_TEMPLATE_ID', // Replace with your EmailJS Template ID
+        'service_so9ofwt', // Replace with your EmailJS Service ID
+        'template_w6celtq', // Replace with your EmailJS Template ID
         {
           name: formData.name,
           email: formData.email,
