@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { MdLocationOn, MdPhone, MdEmail } from 'react-icons/md';
 import MapComponent from './MapComponent';
 import emailjs from 'emailjs-com';
@@ -14,6 +14,8 @@ const ContactComponent = () => {
     email: '',
     message: '',
   });
+
+  const [showPopup, setShowPopup] = useState(false); // State for popup
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -31,12 +33,13 @@ const ContactComponent = () => {
           email: formData.email,
           message: formData.message,
         },
-        'YOUR_USER_ID' // Replace with your EmailJS User ID
+        '_jntU9hcJAzFmrcl0' // Replace with your EmailJS User ID
       )
       .then(
         (response) => {
-          alert('Message sent successfully!');
+          setShowPopup(true); // Show popup on success
           setFormData({ name: '', email: '', message: '' });
+          setTimeout(() => setShowPopup(false), 3000); // Hide popup after 3 seconds
         },
         (error) => {
           alert('Failed to send message. Please try again later.');
@@ -51,6 +54,21 @@ const ContactComponent = () => {
       exit={{ opacity: 0 }}
       className="flex-grow container mx-auto py-12 px-4 text-gray-800 my-10 bg-white shadow-lg rounded-lg"
     >
+      {/* Success Popup */}
+      <AnimatePresence>
+        {showPopup && (
+          <motion.div
+            initial={{ opacity: 0, y: -30 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -30 }}
+            className="fixed top-4 left-1/2 transform -translate-x-1/2 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg z-50 max-w-xs text-center font-semibold"
+            style={{ zIndex: 9999 }} // Ensuring the popup stays on top
+          >
+            Message sent successfully!
+          </motion.div>
+        )}
+      </AnimatePresence>
+
       <motion.h1
         initial={{ y: -50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
