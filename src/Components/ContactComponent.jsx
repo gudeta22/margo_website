@@ -24,14 +24,14 @@ const ContactComponent = () => {
 
     emailjs
       .send(
-        'service_so9ofwt', // Replace with your EmailJS Service ID
-        'template_w6celtq', // Replace with your EmailJS Template ID
+        'service_q05t6cl', // Replace with your EmailJS Service ID
+        'template_22adeim', // Replace with your EmailJS Template ID
         {
           name: formData.name,
           email: formData.email,
           message: formData.message,
         },
-        '_jntU9hcJAzFmrcl0' // Replace with your EmailJS User ID
+        'n8IpOkwkB-QRc7nSr' // Replace with your EmailJS User ID
       )
       .then(
         (response) => {
