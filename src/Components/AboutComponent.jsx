@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import missionimg from '../assets/Photos/margomission.jpg';
+import missionimg from '../assets/Photos/home.jpeg';
 
 function AboutComponent() {
   const elementsRef = useRef([]); // Store references to all elements we want to animate

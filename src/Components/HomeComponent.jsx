@@ -14,9 +14,9 @@ function HomeComponent() {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           setFadeIn(true);
-          countUp(setHappyClients, 100);
-          countUp(setProjectsDone, 80);
-          countUp(setInstallations, 109);
+          countUp(setHappyClients, 80);
+          countUp(setProjectsDone, 50);
+          countUp(setInstallations, 80);
           observer.disconnect(); // Stop observing after the stats are shown
         }
       });
@@ -95,22 +95,22 @@ function HomeComponent() {
             {/* Happy Clients */}
             <div className="flex flex-col items-center bg-blue-500 opacity-80 text-white py-4 sm:py-6 rounded-lg shadow-lg">
               <FaUserFriends size={24} className="sm:mb-4 mb-2" />
-              <h3 className="text-base sm:text-xl font-semibold">Happy Clients</h3>
-              <p className="text-2xl sm:text-3xl font-bold mt-2">{happyClients}</p>
+              <h3 className="text-base sm:text-xl font-semibold">Clients</h3>
+              <p className="text-2xl sm:text-3xl font-bold mt-2">{happyClients}+</p>
             </div>
 
             {/* Projects Done */}
             <div className="flex flex-col items-center bg-blue-100 opacity-80 text-blue-600 py-4 sm:py-6 rounded-lg shadow-lg">
               <FaCheckCircle size={24} className="sm:mb-4 mb-2" />
               <h3 className="text-base sm:text-xl font-semibold">Projects Done</h3>
-              <p className="text-2xl sm:text-3xl font-bold mt-2">{projectsDone}</p>
+              <p className="text-2xl sm:text-3xl font-bold mt-2">{projectsDone}+</p>
             </div>
 
             {/* Number of Installations */}
             <div className="flex flex-col items-center bg-blue-500 opacity-80 text-white py-4 sm:py-6 rounded-lg shadow-lg">
               <FaAward size={24} className="sm:mb-4 mb-2" />
               <h3 className="text-base sm:text-xl font-semibold">Number of Installations</h3>
-              <p className="text-2xl sm:text-3xl font-bold mt-2">{installations}</p>
+              <p className="text-2xl sm:text-3xl font-bold mt-2">{installations}+</p>
             </div>
           </div>
         </div>

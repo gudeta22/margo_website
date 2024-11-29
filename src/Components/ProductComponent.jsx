@@ -2,12 +2,14 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
+import CBC from '../assets/Photos/CBC.jpeg'
+import HormoneAnalyzer from '../assets/Photos/HormoneAnalyzer.jpeg'
 
 const sermons = [
     {
         id: 1,
         title: "Hematology Analyzer(CBC)",
-        imageUrl: "https://medicalequipment-msl.com/upload/img/20200810/202008101428259081.jpg",
+        imageUrl: CBC,
         description: "A Hematology Analyzer, specifically for Complete Blood Count (CBC), is a medical device used to analyze blood samples, providing critical information on various blood components"
     },
     {
@@ -19,7 +21,7 @@ const sermons = [
     {
         id: 3,
         title: "Hormone Analyzer",
-        imageUrl: "https://svrbiotech.com/wp-content/uploads/2020/02/ss2.jpg",
+        imageUrl:HormoneAnalyzer,
         description: "A Hormone Analyzer is a specialized medical device used to measure hormone levels in blood or other bodily fluids."
     },
 ];
@@ -30,6 +32,7 @@ const ProductComponent = () => {
     const toggleAccordion = (id) => {
         setExpandedId(prevId => (prevId === id ? null : id));
     };
+    
 
     return (
         <div className="container mx-auto px-4 my-10 lg:my-52 scroll-animation">
@@ -44,11 +47,11 @@ const ProductComponent = () => {
                 {sermons.map(sermon => (
                     <div key={sermon.id} className="bg-white shadow-xl border-gray-200 rounded-lg overflow-hidden">
                         {/* Sermon Image */}
-                        <div className="relative w-full h-56">
+                        <div className="relative w-full h-72 ">
                             <img
                                 src={sermon.imageUrl}
                                 alt={sermon.title}
-                                className="absolute top-0 left-0 w-full h-full object-cover"
+                                className="absolute top-0 left-0 w-full h-full object-fit"
                             />
                         </div>
 
