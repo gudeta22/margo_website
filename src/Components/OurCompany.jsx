@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from "react";
+import Home from '../assets/Photos/home.jpeg'
 
 function OurCompanyComponent() {
   const elementsRef = useRef([]); // Store references to all elements we want to animate
@@ -68,7 +69,7 @@ function OurCompanyComponent() {
           }}
         >
           <div className="w-full lg:w-[30rem] lg:h-[20rem]   rounded-lg shadow-lg overflow-hidden">
-            <img src="https://talema.com/wp-content/uploads/blog/medical-device/medical-devices-hospital.jpg" className="object-cover w-full h-auto lg:h-[20rem]" alt="Our Company" />
+            <img src={Home} className="object-cover w-full h-auto lg:h-[20rem]" alt="Our Company" />
           </div>
         </div>
       </div>
