@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
-import productbg from '../assets/Photos/missionimg.jpg'; // Ensure this path is correct
-
+import productbg from '../assets/Photos/productnav.jpg'
 function NavProduct() {
   useEffect(() => {
     // Scroll to the top of the page when the component is mounted

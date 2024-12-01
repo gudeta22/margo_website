@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import Home from '../assets/Photos/home.jpeg'
 
+
 function OurCompanyComponent() {
   const elementsRef = useRef([]); // Store references to all elements we want to animate
 
