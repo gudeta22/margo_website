@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
@@ -45,7 +45,7 @@ const ProductComponent = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {sermons.map(sermon => (
-                    <div key={sermon.id} className="bg-white shadow-xl border-gray-200 rounded-lg overflow-hidden">
+                    <div key={sermon.id} className="bg-white shadow-xl border-gray-200 rounded-lg overflow-hidden h-fit">
                         {/* Sermon Image */}
                         <div className="relative w-full h-72 ">
                             <img
